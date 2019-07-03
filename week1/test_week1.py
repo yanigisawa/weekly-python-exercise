@@ -11,7 +11,7 @@ def test_zeroes():
 def test_basic(total, maxval):
     result = list(magic_tuples(total,maxval))
 
-    assert all([t[0] <= maxval and t[1] <= maxval
+    assert all([t[0] < maxval and t[1] < maxval
                 for t in result])
     assert all([sum(t) == total
                 for t in result])
@@ -23,3 +23,11 @@ def test_is_iterator():
 def test_impossible():
     result = list(magic_tuples(100, 3))
     assert len(result) == 0
+
+def test_return_val_for_ten_ten():
+    result = list(magic_tuples(10, 10))
+    should_be = [(1, 9), (2, 8), (3, 7), (4, 6), (5, 5), (6, 4), (7, 3), (8, 2), (9, 1)]
+
+    assert len(result) == len(should_be)
+    for tuple in result:
+        assert tuple in should_be
