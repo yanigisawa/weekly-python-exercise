@@ -15,7 +15,7 @@ def test_basic(total, maxval):
                 for t in result])
     assert all([sum(t) == total
                 for t in result])
-    
+
 def test_is_iterator():
     result = magic_tuples(10, 10)
     assert iter(result) == result
