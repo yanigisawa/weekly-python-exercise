@@ -71,3 +71,10 @@ def test_multiple_keys():
     kab = mygetter('a', 'b')
 
     assert kab(d) == (1, 2)
+
+
+def test_lots_of_keys():
+    d = {'a':1, 'b':2, 'c':3}
+    kab = mygetter('a', 'b', 'c')
+
+    assert kab(d) == (1, 2, 3)
