@@ -11,6 +11,7 @@ black = "*"
 pytest = "*"
 pytest-watch = "*"
 pylint = "*"
+flask = "*"
 
 [requires]
 python_version = "3.7"

@@ -11,3 +11,5 @@ Week 7: Once per Minute
 Week 8: String Range
 Week 9: Uniquish
 Week 10: File Stats
+Week 11: File Stat Objects
+Week 12: Flask File Stats
